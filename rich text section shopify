@@ -1,0 +1,353 @@
+{%- comment -%}
+  {
+    "name": "About 01",
+    "author": "PusherCommerce"
+    "description": "Please DO NOT copy in any form. Any act of copying will be sued and held responsible with the law"
+  }
+{%- endcomment -%}
+
+{%- capture minify -%}
+  <style>
+    #psb-{{ section.id }} {
+      --psb-gutter-x: 25px;
+      background-color: {{section.settings.background_color}};
+      color: {{section.settings.text_color}};
+      {% if section.settings.section_height == true %}
+        min-height: 100vh;
+      {% endif %}
+      padding-top: {{section.settings.section_padding_top}}px;
+      padding-bottom: {{section.settings.section_padding_bottom}}px;
+      display: flex;
+      align-items: center;
+      line-height: 1.5;
+    }
+
+    #psb-{{ section.id }} .psb-section-inner {
+      text-align: {{section.settings.text_align}};
+    }
+
+    #psb-{{ section.id }} .psb-btn-wrapper {
+      text-align: {{ section.settings.text_align_mobile }};
+    }
+
+    #psb-{{ section.id }} .psb-section-title::before,
+    #psb-{{ section.id }} .psb-section-title::after {
+      display: none;
+    }
+
+    #psb-{{ section.id }} .psb-section-title {
+      color: {{section.settings.text_color}};
+      margin-top: 0;
+      margin-bottom: 30px;
+      line-height: 1.25;
+      text-align: {{section.settings.text_align}};
+    }
+
+    #psb-{{ section.id }} .psb-divider {
+      display: inline-block;
+      width: 185px;
+      height: 4px;
+      background-color: var(--divider-color);
+      margin: 0px auto 20px;
+    }
+
+    #psb-{{ section.id }} .psb-section-text p {
+      color: {{section.settings.text_color}};
+      margin-top: 0;
+      max-width: 840px;
+      display: inline-block;
+    }
+
+    #psb-{{ section.id }} .psb-btn-group {
+      margin-top: 30px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      #psb-{{ section.id }} {
+        min-height: auto;
+        padding-top: {{section.settings.section_padding_top_mobile}}px;
+        padding-bottom: {{section.settings.section_padding_bottom_mobile}}px;
+      }
+      #psb-{{ section.id }} .psb-divider {
+        width: 120px;
+      }
+    }
+  </style>
+{%- endcapture -%}
+{{ minify | strip_newlines }}
+
+<div id="psb-{{ section.id }}" class="psb-{{ section.id }} psb-section psb-about-about-01" style="display: none;">
+  <div class="{{ section.settings.container_width }}">
+    <div class="psb-section-inner">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'heading' %}
+            {% if block.settings.heading_text != blank %}
+              <{{ block.settings.heading_tag }} class="psb-section-title" {{ block.shopify_attributes }}>
+                {{ block.settings.heading_text | escape }}
+              </{{ block.settings.heading_tag }}>
+            {% endif %}
+          {% when 'divider' %}
+            <span class="psb-divider" style="--divider-color: {{block.settings.divider_color}}" {{ block.shopify_attributes }}></span>
+          {% when 'text' %}
+            {% if block.settings.section_text != blank %}
+              <div class="psb-section-text" {{ block.shopify_attributes }}>
+                {{ block.settings.section_text }}
+              </div>
+            {% endif %}
+          {% when 'buttons' %}
+            <div class="psb-btn-wrapper">
+              <div class="psb-btn-group" {{ block.shopify_attributes }}>
+                {% if block.settings.button_label_1 != blank %}
+                  <a
+                    href="{{block.settings.button_link_1}}"
+                    class="psb-btn {% if block.settings.button_is_rounded_1 == true %} psb-btn-rounded {% endif %}"
+                    style="background-color: {{block.settings.btn_bg_1}}; color: {{block.settings.btn_color_1}};"
+                  >
+                    {{ block.settings.button_label_1 }}
+                  </a>
+                {% endif %}
+              </div>
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "⚡︎PSB: About 01",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "container_width",
+      "options": [
+        {
+          "value": "psb-container",
+          "label": "Container"
+        },
+        {
+          "value": "psb-container-fluid",
+          "label": "Container Fluid"
+        },
+        {
+          "value": "psb-container-fullwidth",
+          "label": "Container Fullwidth"
+        }
+      ],
+      "default": "psb-container",
+      "label": "Container width"
+    },
+    {
+      "type": "header",
+      "content": "Main settings"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Content alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        }
+      ]
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "transparent"
+    },
+    {
+      "type": "header",
+      "content": "Desktop"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "min": 0,
+      "max": 500,
+      "step": 5,
+      "unit": "px",
+      "label": "Section padding-top",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "min": 0,
+      "max": 500,
+      "step": 5,
+      "unit": "px",
+      "label": "Section padding-bottom",
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top_mobile",
+      "min": 0,
+      "max": 500,
+      "step": 10,
+      "unit": "px",
+      "label": "Section padding-top",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom_mobile",
+      "min": 0,
+      "max": 500,
+      "step": 10,
+      "unit": "px",
+      "label": "Section padding-bottom",
+      "default": 50
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Heading",
+      "type": "heading",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "heading_text",
+          "label": "Heading"
+        },
+        {
+          "type": "select",
+          "id": "heading_tag",
+          "label": "Heading Tag",
+          "options": [
+            {
+              "value": "h1",
+              "label": "H1"
+            },
+            {
+              "value": "h2",
+              "label": "H2"
+            },
+            {
+              "value": "h3",
+              "label": "H3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Divider",
+      "type": "divider",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "color",
+          "id": "divider_color",
+          "label": "Color",
+          "default": "#ff6303"
+        }
+      ]
+    },
+    {
+      "name": "Text",
+      "type": "text",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "section_text",
+          "label": "Text"
+        }
+      ]
+    },
+    {
+      "name": "Button",
+      "type": "buttons",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label_1",
+          "label": "Label"
+        },
+        {
+          "type": "url",
+          "id": "button_link_1",
+          "label": "Link"
+        },
+        {
+          "type": "color",
+          "id": "btn_bg_1",
+          "label": "Background color"
+        },
+        {
+          "type": "color",
+          "id": "btn_color_1",
+          "label": "Label color"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_is_rounded_1",
+          "default": false,
+          "label": "Rounded"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "⚡︎PSB: About 01",
+      "settings": {
+        "text_align": "center",
+        "text_color": "#262424"
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "settings": {
+            "heading_tag": "h2",
+            "heading_text": "World Of Custom Made"
+          }
+        },
+        {
+          "type": "divider",
+          "settings": {
+            "divider_color": "#ff6303"
+          }
+        },
+        {
+          "type": "text",
+          "settings": {
+            "section_text": "<p>Bringing forward a collection with an aesthetic appeal for a broad market while ensuring exceptional results is a challenge for any organization. We provide a systematic approach to creating timeless designs that are consistently reproduced through the company’s in-house capabilities.</p>"
+          }
+        },
+        {
+          "type": "buttons",
+          "settings": {
+            "btn_bg_1": "#ff6303",
+            "btn_color_1": "#fff",
+            "button_is_rounded_1": true,
+            "button_label_1": "Shop Now"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

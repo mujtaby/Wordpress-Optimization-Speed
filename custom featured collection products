@@ -1,0 +1,202 @@
+{% assign collection = section.settings.collection %}
+{% assign product_limit = section.settings.product_limit %}
+{% assign button_name = section.settings.button_name %}
+{% assign button_url = section.settings.button_url %}
+<div class="head-section">
+  <h2>{{ section.settings.section_heading }}</h2>
+</div>
+{% if collection.products.size > 0 %}
+  <div class="product-list">
+    <!-- Loop through the products in the collection -->
+    {% for product in collection.products limit: product_limit %}
+      <a href="{{ product.url }}" class="product-link">
+        <div class="product-item">
+          <img src="{{ product.featured_image | img_url: 'master' }}" alt="{{ product.title }}">
+          <h3>{{ product.title }}</h3>
+          {% if product.compare_at_price_max > product.price_min %}
+            <p class="sale-price">{{ product.price | money }}</p>
+            <p class="compare-price">{{ product.compare_at_price_max | money }}</p>
+          <div class="sale-badges-custom">
+            <span class="sale-badge">Sale</span>
+            <span class="discount-percentage">
+{% assign discount_percentage = product.compare_at_price_max | minus: product.price_min | times: 100 | divided_by: product.compare_at_price_max | round: 0 %}
+{{ discount_percentage }}% Off
+
+            </span>
+            </div>
+          {% else %}
+            <p>{{ product.price | money }}</p>
+          {% endif %}
+          <!-- Add other product details here as needed -->
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+  <div class="show-more">
+    <!-- Display the "Load More" button -->
+    <a href="{{ button_url }}" class="load-more-button">{{ button_name }}</a>
+  </div>
+{% else %}
+  <p>No products available in this collection.</p>
+{% endif %}
+
+
+<style>
+/* Add styles for sale price and compare price */
+.sale-price {
+  color: #fa0000; /* Adjust color for sale price */
+  font-weight: bold; /* Make it bold or customize as needed */
+}
+
+.compare-price {
+  text-decoration: line-through; /* Add strike-through to compare price */
+  color: #999; /* Adjust color for compare price */
+}
+
+/* Style for the product list container */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1260px;
+    margin: auto;
+    gap: 25px;
+}
+
+/* Style for each product item */
+.product-item {
+  margin-right: 20px; /* Adjust spacing between items */
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
+  box-sizing: border-box;
+  margin-top: 25px;
+}
+.product-list a.product-link {
+    width: 30%;
+}
+  .head-section{
+    text-align:center;
+    
+    margin-top: 15px;
+
+
+  }
+
+.show-more {
+    text-align: center;
+    /* color: black; */
+      margin: 35px;
+}
+.show-more a.load-more-button {
+    color: black;
+    border: 1px solid black;
+    /* padding: 10px; */
+    /* margin: 20px; */
+    padding: 13px 70px;
+    font-weight: 500;
+}
+.product-item img {
+  max-width: 100%; 
+  width: 100%;
+  height: auto;
+}
+  .product-item{
+    position:relative;
+  }
+
+.product-item h3 {
+    margin-bottom: 5px;
+    font-size: 13px;
+    margin-top: 15px;
+    color: black;
+    font-weight: 100;
+}
+ .product-item p{
+  color: #fa0000;
+    font-size: 10px;
+ }
+
+.product-item:nth-child(3n) {
+  margin-right: 0;
+}
+.sale-badges-custom {
+    position: absolute;
+    top: 22px;
+    left: 8px;
+    background: red;
+    color: white;
+    font-size: 10px;
+    padding: 2px;
+}
+@media (max-width: 767px) {
+  .product-list a.product-link {
+    width: 40%; /* 2 products in one row */
+  }
+}
+
+@media (max-width: 486px) {
+  .product-list a.product-link {
+    width: 100%; /* 1 product in one row */
+    padding:20px
+  }
+
+.product-item {
+    margin: 0;
+}
+  .head-section h2{
+    margin-bottom:0;
+  }
+  .product-item h3 {
+    font-size: 13px;
+}
+  .product-list {
+    gap: 0px; 
+}
+}
+</style>
+
+{% schema %}
+{
+  "name": "Collection Box",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section Heading",
+      "default": "Featured Collection"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Select a Collection"
+    },
+    {
+      "type": "range",
+      "id": "product_limit",
+      "label": "Number of Products to Display",
+      "min": 3,
+      "max": 20,
+      "default": 10
+    },
+    {
+      "type": "text",
+      "id": "button_name",
+      "label": "Button Text",
+      "default": "Load More"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Box",
+      "category": "custom"
+    }
+  ]
+}
+{% endschema %}

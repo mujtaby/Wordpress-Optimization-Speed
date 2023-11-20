@@ -1,0 +1,800 @@
+<section class="location">
+  <div class="location-container">
+    <div class="location-wrapper">
+      <div class="location-left">
+
+    <!-- Accordion One -->
+    <div class="acc acc_wrapper">
+
+        {% for block in section.blocks %}
+        <div class="acc_container">
+            <div class="acc_header">
+                <h4>{{ block.settings.heading }}</h4>
+            </div>
+            <div class="acc_content">
+                <div class="acc_content_inner">
+        {% if block.settings.link !=blank %}
+              <div class="inner-location">
+                <a href="{{ block.settings.link }}" class="location-a" target="_blank">
+                  <h4>{{ block.settings.min_heading }}</h4>
+                  <p>{{ block.settings.address }}</p>
+                  <p>{{ block.settings.city }}</p>
+                  <p>{{ block.settings.number }}</p>
+                  <span class="google-btn">{{ block.settings.location-btn }}</span>
+                </a>
+              </div>
+            {% endif %}
+          
+          {% if block.settings.link2 !=blank %}
+              <div class="inner-location">
+                <a href="{{ block.settings.link2 }}" class="location-a" target="_blank">
+                  <h4>{{ block.settings.min_heading2 }}</h4>
+                  <p>{{ block.settings.address2 }}</p>
+                  <p>{{ block.settings.city2 }}</p>
+                  <p>{{ block.settings.number2 }}</p>
+                  <span class="google-btn">{{ block.settings.location-btn2 }}</span>
+                </a>
+              </div>
+            {% endif %}
+
+        {% if block.settings.link3 !=blank %}
+              <div class="inner-location">
+                <a href="{{ block.settings.link3 }}" class="location-a" target="_blank">
+                  <h4>{{ block.settings.min_heading3 }}</h4>
+                  <p>{{ block.settings.address3 }}</p>
+                  <p>{{ block.settings.city3 }}</p>
+                  <p>{{ block.settings.number3 }}</p>
+                  <span class="google-btn">{{ block.settings.location-btn3 }}</span>
+                </a>
+              </div>
+            {% endif %}
+
+        {% if block.settings.link4 !=blank %}
+              <div class="inner-location">
+                <a href="{{ block.settings.link4 }}" class="location-a" target="_blank">
+                  <h4>{{ block.settings.min_heading4 }}</h4>
+                  <p>{{ block.settings.address4 }}</p>
+                  <p>{{ block.settings.city4 }}</p>
+                  <p>{{ block.settings.number4 }}</p>
+                  <span class="google-btn">{{ block.settings.location-btn4 }}</span>
+                </a>
+              </div>
+            {% endif %}
+
+
+        {% if block.settings.link5 !=blank %}
+              <div class="inner-location">
+                <a href="{{ block.settings.link5 }}" class="location-a" target="_blank">
+                  <h4>{{ block.settings.min_heading5 }}</h4>
+                  <p>{{ block.settings.address5 }}</p>
+                  <p>{{ block.settings.city5 }}</p>
+                  <p>{{ block.settings.number5 }}</p>
+                  <span class="google-btn">{{ block.settings.location-btn5 }}</span>
+                </a>
+              </div>
+            {% endif %}
+
+
+        {% if block.settings.link6 !=blank %}
+              <div class="inner-location">
+                <a href="{{ block.settings.link6 }}" class="location-a" target="_blank">
+                  <h4>{{ block.settings.min_heading6 }}</h4>
+                  <p>{{ block.settings.address6 }}</p>
+                  <p>{{ block.settings.city6 }}</p>
+                  <p>{{ block.settings.number6 }}</p>
+                  <span class="google-btn">{{ block.settings.location-btn6 }}</span>
+                </a>
+              </div>
+            {% endif %}
+
+
+        {% if block.settings.link7 !=blank %}
+              <div class="inner-location">
+                <a href="{{ block.settings.link7 }}" class="location-a" target="_blank">
+                  <h4>{{ block.settings.min_heading7 }}</h4>
+                  <p>{{ block.settings.address7 }}</p>
+                  <p>{{ block.settings.city7 }}</p>
+                  <p>{{ block.settings.number7 }}</p>
+                  <span class="google-btn">{{ block.settings.location-btn7 }}</span>
+                </a>
+              </div>
+            {% endif %}
+
+
+        {% if block.settings.link8 !=blank %}
+              <div class="inner-location">
+                <a href="{{ block.settings.link8 }}" class="location-a" target="_blank">
+                  <h4>{{ block.settings.min_heading8 }}</h4>
+                  <p>{{ block.settings.address8 }}</p>
+                  <p>{{ block.settings.city8 }}</p>
+                  <p>{{ block.settings.number8 }}</p>
+                  <span class="google-btn">{{ block.settings.location-btn8 }}</span>
+                </a>
+              </div>
+            {% endif %}
+
+
+       {% if block.settings.link9 !=blank %}
+              <div class="inner-location">
+                <a href="{{ block.settings.link9 }}" class="location-a" target="_blank">
+                  <h4>{{ block.settings.min_heading9 }}</h4>
+                  <p>{{ block.settings.address9 }}</p>
+                  <p>{{ block.settings.city9 }}</p>
+                  <p>{{ block.settings.number9 }}</p>
+                  <span class="google-btn">{{ block.settings.location-btn9 }}</span>
+                </a>
+              </div>
+            {% endif %}
+
+
+
+       {% if block.settings.link10 !=blank %}
+              <div class="inner-location">
+                <a href="{{ block.settings.link10 }}" class="location-a" target="_blank">
+                  <h4>{{ block.settings.min_heading10 }}</h4>
+                  <p>{{ block.settings.address10 }}</p>
+                  <p>{{ block.settings.city10 }}</p>
+                  <p>{{ block.settings.number10 }}</p>
+                  <span class="google-btn">{{ block.settings.location-btn10 }}</span>
+                </a>
+              </div>
+            {% endif %}
+                  
+                    
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+
+      </div>
+      <div class="location-right">
+        {{ section.settings.map }}
+        </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+.acc_container {
+    border-bottom: 1px solid #8f8f8f;
+}
+
+.acc_header {
+    cursor: pointer;
+    background: #fff;
+    padding: 2px;
+    position: relative;
+
+}
+
+
+.acc_content {
+    background: #fff;
+    transition: max-height .3s;
+    overflow: hidden;
+    max-height: 0;
+}
+
+/*.acc_header:after {*/
+/*    content: "h";*/
+/*    position: absolute;*/
+/*    right: 20px;*/
+/*    top: 14px;*/
+/*}*/
+
+
+.acc_content_inner {
+    padding: .9rem;
+}
+
+.acc_content.show {
+    display: block;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+</style>
+<script>
+  const accordion_wrapper = document.querySelector(".acc_wrapper");
+
+
+document.querySelector("body").addEventListener("click", function (e) {
+
+    // Check for the class events
+    const target = e.target;
+    const closestEl = target.closest(".acc_container");
+    const parentEl = target.closest(".acc_wrapper");
+    if (closestEl) {
+
+        const contentEl = closestEl.querySelector(".acc_content");
+
+        // check if its open
+        if (contentEl.classList.contains("show")) {
+            contentEl.classList.remove("show");
+        } else {
+            contentEl.classList.add("show")
+        }
+
+
+    }
+
+});
+</script>
+{% schema %}
+  {
+    "name": "Store Locator",
+    "settings": [
+     {
+       "type": "textarea",
+       "id": "map",
+       "label": "Google Map"
+     }
+    ],
+    "blocks": [
+     {
+       "name": "Location",
+       "type": "Accordion",
+       "settings": [
+         {
+            "type": "header",
+            "content": "First Location content"
+         },
+
+         {
+           "type": "text",
+           "id": "heading",
+           "default": "Heading",
+           "label": "Heading"
+         },
+         {
+           "type": "url",
+           "id": "link",
+           "label": "Location link"
+         },
+         {
+           "type": "text",
+           "id": "min_heading",
+           "default": "Heading",
+           "label": "Heading"
+         },
+         {
+           "type": "text",
+           "id": "address",
+           "default": "Address",
+           "label": "Address"
+         },
+         {
+           "type": "text",
+           "id": "city",
+           "default": "city",
+           "label": "City"
+         },
+         {
+           "type": "text",
+           "id": "number",
+           "default": "number",
+           "label": "Number" 
+         },
+         {
+           "type": "text",
+           "id": "location-btn",
+           "default": "Open Google Map",
+           "label": "Location button link"
+         },
+          {
+            "type": "header",
+            "content": "Second Location content"
+         },
+
+         {
+           "type": "text",
+           "id": "heading2",
+           "default": "Heading",
+           "label": "Heading"
+         },
+         {
+           "type": "url",
+           "id": "link2",
+           "label": "Location link"
+         },
+         {
+           "type": "text",
+           "id": "min_heading2",
+           "default": "Heading",
+           "label": "Heading"
+         },
+         {
+           "type": "text",
+           "id": "address2",
+           "default": "Address",
+           "label": "Address"
+         },
+         {
+           "type": "text",
+           "id": "city2",
+           "default": "city",
+           "label": "City"
+         },
+         {
+           "type": "text",
+           "id": "number2",
+           "default": "number",
+           "label": "Number" 
+         },
+         {
+           "type": "text",
+           "id": "location-btn2",
+           "default": "Open Google Map",
+           "label": "Location button link"
+         },
+
+
+         {
+            "type": "header",
+            "content": "Third Location content"
+         },
+
+
+
+         {
+           "type": "text",
+           "id": "heading3",
+           "default": "Heading",
+           "label": "Heading"
+         },
+         {
+           "type": "url",
+           "id": "link3",
+           "label": "Location link"
+         },
+         {
+           "type": "text",
+           "id": "min_heading3",
+           "default": "Heading",
+           "label": "Heading"
+         },
+         {
+           "type": "text",
+           "id": "address3",
+           "default": "Address",
+           "label": "Address"
+         },
+         {
+           "type": "text",
+           "id": "city3",
+           "default": "city",
+           "label": "City"
+         },
+         {
+           "type": "text",
+           "id": "number3",
+           "default": "number",
+           "label": "Number" 
+         },
+         {
+           "type": "text",
+           "id": "location-btn3",
+           "default": "Open Google Map",
+           "label": "Location button link"
+         },
+
+
+         {
+            "type": "header",
+            "content": "Fourth Location content"
+         },
+
+
+         {
+           "type": "text",
+           "id": "heading4",
+           "default": "Heading",
+           "label": "Heading"
+         },
+         {
+           "type": "url",
+           "id": "link4",
+           "label": "Location link"
+         },
+         {
+           "type": "text",
+           "id": "min_heading4",
+           "default": "Heading",
+           "label": "Heading"
+         },
+         {
+           "type": "text",
+           "id": "address4",
+           "default": "Address",
+           "label": "Address"
+         },
+         {
+           "type": "text",
+           "id": "city4",
+           "default": "city",
+           "label": "City"
+         },
+         {
+           "type": "text",
+           "id": "number4",
+           "default": "number",
+           "label": "Number" 
+         },
+         {
+           "type": "text",
+           "id": "location-btn4",
+           "default": "Open Google Map",
+           "label": "Location button link"
+         },
+
+
+         {
+            "type": "header",
+            "content": "Fifth Location content"
+         },
+
+        {
+           "type": "text",
+           "id": "heading5",
+           "default": "Heading",
+           "label": "Heading"
+         },
+         {
+           "type": "url",
+           "id": "link5",
+           "label": "Location link"
+         },
+         {
+           "type": "text",
+           "id": "min_heading5",
+           "default": "Heading",
+           "label": "Heading"
+         },
+         {
+           "type": "text",
+           "id": "address5",
+           "default": "Address",
+           "label": "Address"
+         },
+         {
+           "type": "text",
+           "id": "city5",
+           "default": "city",
+           "label": "City"
+         },
+         {
+           "type": "text",
+           "id": "number5",
+           "default": "number",
+           "label": "Number" 
+         },
+         {
+           "type": "text",
+           "id": "location-btn5",
+           "default": "Open Google Map",
+           "label": "Location button link"
+         },
+
+         {
+            "type": "header",
+            "content": "Sixth Location content"
+         },
+         {
+           "type": "text",
+           "id": "heading6",
+           "default": "Heading",
+           "label": "Heading"
+         },
+         {
+           "type": "url",
+           "id": "link6",
+           "label": "Location link"
+         },
+         {
+           "type": "text",
+           "id": "min_heading6",
+           "default": "Heading",
+           "label": "Heading"
+         },
+         {
+           "type": "text",
+           "id": "address6",
+           "default": "Address",
+           "label": "Address"
+         },
+         {
+           "type": "text",
+           "id": "city6",
+           "default": "city",
+           "label": "City"
+         },
+         {
+           "type": "text",
+           "id": "number6",
+           "default": "number",
+           "label": "Number" 
+         },
+         {
+           "type": "text",
+           "id": "location-btn6",
+           "default": "Open Google Map",
+           "label": "Location button link"
+         },
+
+
+         {
+            "type": "header",
+            "content": "Seventh Location content"
+         },
+
+         {
+           "type": "text",
+           "id": "heading7",
+           "default": "Heading",
+           "label": "Heading"
+         },
+         {
+           "type": "url",
+           "id": "link7",
+           "label": "Location link"
+         },
+         {
+           "type": "text",
+           "id": "min_heading7",
+           "default": "Heading",
+           "label": "Heading"
+         },
+         {
+           "type": "text",
+           "id": "address7",
+           "default": "Address",
+           "label": "Address"
+         },
+         {
+           "type": "text",
+           "id": "city7",
+           "default": "city",
+           "label": "City"
+         },
+         {
+           "type": "text",
+           "id": "number7",
+           "default": "number",
+           "label": "Number" 
+         },
+         {
+           "type": "text",
+           "id": "location-btn7",
+           "default": "Open Google Map",
+           "label": "Location button link"
+         },
+
+         {
+            "type": "header",
+            "content": "Eighth Location content"
+         },
+
+         {
+           "type": "text",
+           "id": "heading8",
+           "default": "Heading",
+           "label": "Heading"
+         },
+         {
+           "type": "url",
+           "id": "link8",
+           "label": "Location link"
+         },
+         {
+           "type": "text",
+           "id": "min_heading8",
+           "default": "Heading",
+           "label": "Heading"
+         },
+         {
+           "type": "text",
+           "id": "address8",
+           "default": "Address",
+           "label": "Address"
+         },
+         {
+           "type": "text",
+           "id": "city8",
+           "default": "city",
+           "label": "City"
+         },
+         {
+           "type": "text",
+           "id": "number8",
+           "default": "number",
+           "label": "Number" 
+         },
+         {
+           "type": "text",
+           "id": "location-btn8",
+           "default": "Open Google Map",
+           "label": "Location button link"
+         },
+
+         {
+            "type": "header",
+            "content": "Ninth Location content"
+         },
+
+
+         {
+           "type": "text",
+           "id": "heading9",
+           "default": "Heading",
+           "label": "Heading"
+         },
+         {
+           "type": "url",
+           "id": "link9",
+           "label": "Location link"
+         },
+         {
+           "type": "text",
+           "id": "min_heading9",
+           "default": "Heading",
+           "label": "Heading"
+         },
+         {
+           "type": "text",
+           "id": "address9",
+           "default": "Address",
+           "label": "Address"
+         },
+         {
+           "type": "text",
+           "id": "city9",
+           "default": "city",
+           "label": "City"
+         },
+         {
+           "type": "text",
+           "id": "number9",
+           "default": "number",
+           "label": "Number" 
+         },
+         {
+           "type": "text",
+           "id": "location-btn9",
+           "default": "Open Google Map",
+           "label": "Location button link"
+         },
+
+
+         {
+            "type": "header",
+            "content": "Tenth Location content"
+         },
+
+         {
+           "type": "text",
+           "id": "heading10",
+           "default": "Heading",
+           "label": "Heading"
+         },
+         {
+           "type": "url",
+           "id": "link10",
+           "label": "Location link"
+         },
+         {
+           "type": "text",
+           "id": "min_heading10",
+           "default": "Heading",
+           "label": "Heading"
+         },
+         {
+           "type": "text",
+           "id": "address10",
+           "default": "Address",
+           "label": "Address"
+         },
+         {
+           "type": "text",
+           "id": "city10",
+           "default": "city",
+           "label": "City"
+         },
+         {
+           "type": "text",
+           "id": "number10",
+           "default": "number",
+           "label": "Number" 
+         },
+         {
+           "type": "text",
+           "id": "location-btn10",
+           "default": "Open Google Map",
+           "label": "Location button link"
+         }
+
+
+
+
+         
+
+
+         
+       ]
+     }
+  ],
+  "presets": [
+    {
+      "name": "Store Locator",
+      "category": "custom"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+
+
+
+
+css file
+/* Accordion start */
+.location-left {
+    width: 30%;
+}
+.location-right {
+    width: 70%;
+}
+.location-container {
+    width: 100%;
+    padding: 0 20px;
+}
+.location-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.location-right iframe {
+    width: 100%;
+}
+.inner-location p{
+  margin: 0;
+}
+a.location-a * {
+    font-size: 14px;
+}
+a.location-a h4 {
+    font-size: 16px!important;
+}
+span.google-btn {
+    color: #1e90ff;
+    text-decoration: underline;
+    padding-bottom: 20px;
+    display: inline-block;
+}
+.acc_header h4{
+  font-size: 14px;
+  margin: 0;
+  cursor: pointer;
+  padding: 8px 0;
+}
+.acc.acc_wrapper {
+    border-right: 2px solid #e8eaed;
+    margin-right: 15px;
+}
+/* Accordion end */

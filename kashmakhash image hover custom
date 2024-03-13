@@ -1,0 +1,158 @@
+<div class="image-section">
+   <div class="text-container">
+     <p class="custom-hover-paragraph">Kashmakash</p>
+     <h5 class="custom-paragraph"> Indulge in the luxurious allure of perfumes as we bring you the perfect blend of sophistication and opulence in our featured collection.
+      </h5>
+    <button id="men-button" class="custom-button-hover"><a href="{{section.settings.men-link}}" class="custom-link-button">{{ section.settings.Men-heading }}</a></button>
+    <button id="women-button" class="custom-button-hover"><a href="{{section.settings.women-link}}" class="custom-link-button">{{ section.settings.Women-heading }}</a></button>
+    <button id="perfume-button" class="custom-button-hover"><a href="{{section.settings.perfume-link}}" class="custom-link-button">{{ section.settings.Perfume-heading }}</a></button>
+  </div>
+  <div class="image-container">
+    <img id="main-image" src="{{ section.settings.id-men | img_url: '600x600' }}" alt="Main Image">
+    <img id="women-image" class="hidden" src="{{ section.settings.id-women | img_url: '600x600' }}" alt="Women Image">
+    <img id="perfume-image" class="hidden" src="{{ section.settings.id-perfume | img_url: '600x600' }}" alt="Perfume Image">
+  </div>
+ 
+</div>
+
+<style>
+  .custom-hover-paragraph{
+    text-align: left;
+    color: white;
+    padding: 10px;
+    margin: 0;
+  }
+  .image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:black;
+  }
+
+  .image-container {
+    position: relative;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .text-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const mainImage = document.getElementById("main-image");
+    const womenImage = document.getElementById("women-image");
+    const perfumeImage = document.getElementById("perfume-image");
+    
+    const menButton = document.getElementById("men-button");
+    const womenButton = document.getElementById("women-button");
+    const perfumeButton = document.getElementById("perfume-button");
+
+    menButton.addEventListener("mouseover", function() {
+      mainImage.classList.remove("hidden");
+      womenImage.classList.add("hidden");
+      perfumeImage.classList.add("hidden");
+    });
+
+    womenButton.addEventListener("mouseover", function() {
+      mainImage.classList.add("hidden");
+      womenImage.classList.remove("hidden");
+      perfumeImage.classList.add("hidden");
+    });
+
+    perfumeButton.addEventListener("mouseover", function() {
+      mainImage.classList.add("hidden");
+      womenImage.classList.add("hidden");
+      perfumeImage.classList.remove("hidden");
+    });
+  });
+</script>
+
+
+{% schema %}
+{
+  "name": {
+    "en": "Image Hover"
+  },
+  "class": "index-section",
+  "settings": [
+  {
+               "type":"image_picker",
+               "id":"id-men",
+               "label":"Men"
+            },
+     {
+      "type": "text",
+      "id": "Men-heading",
+      "label": {
+        "en": "Heading"
+      }
+     },
+      {
+      "type": "url",
+      "id": "men-link",
+      "label": "Button Link"
+    },
+     {
+               "type":"image_picker",
+               "id":"id-women",
+               "label":"Women"
+            },
+     {
+      "type": "url",
+      "id": "women-link",
+      "label": "Button Link"
+    },
+     {
+      "type": "text",
+      "id": "Women-heading",
+      "label": {
+        "en": "Heading"
+      }
+     },
+   
+     {
+               "type":"image_picker",
+               "id":"id-perfume",
+               "label":"Perfume"
+            },
+     {
+      "type": "text",
+      "id": "Perfume-heading",
+      "label": {
+        "en": "Heading"
+      }
+     },
+      {
+      "type": "url",
+      "id": "perfume-link",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": {
+        "en": "Heading"
+      },
+      "default": {
+        "en": "Talk about your brand"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "name": {
+        "en": "Image Hover"
+      },
+      "category": {
+        "en": "Text"
+      }
+    }
+  ]
+}
+{% endschema %}

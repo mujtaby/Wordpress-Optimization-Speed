@@ -1,0 +1,865 @@
+<div id="shopify-section-{{ section.id }}ss_featured_collection_5_{{ section.id }}" class="shopify-section shopify-section-padding-{{ section.id }}" bis_skin_checked="1">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <style data-shopify="">
+    
+  @font-face {
+  font-family: "Josefin Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("//section.store/cdn/fonts/josefin_sans/josefinsans_n4.c8300d95fd4ce72542a6efba9c682da40d144fba.woff2?h1=c2VjdGlvbi5zdG9yZQ&h2=c2VjdGlvbi1zdG9yZS1hcHAuYWNjb3VudC5teXNob3BpZnkuY29t&hmac=1081bc13bac779d73b77022741d8b8608aa5451af6a05907fc023625940c00f1") format("woff2"),
+       url("//section.store/cdn/fonts/josefin_sans/josefinsans_n4.ed7230a86e75b34b997bd12a5e1b87fcaf7104d8.woff?h1=c2VjdGlvbi5zdG9yZQ&h2=c2VjdGlvbi1zdG9yZS1hcHAuYWNjb3VudC5teXNob3BpZnkuY29t&hmac=3f19a3e11bab2423756ce410220df09957f15affd53a78fa0ec435e5660aa636") format("woff");
+}
+
+  @font-face {
+  font-family: "Josefin Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("//section.store/cdn/fonts/josefin_sans/josefinsans_n4.c8300d95fd4ce72542a6efba9c682da40d144fba.woff2?h1=c2VjdGlvbi5zdG9yZQ&h2=c2VjdGlvbi1zdG9yZS1hcHAuYWNjb3VudC5teXNob3BpZnkuY29t&hmac=1081bc13bac779d73b77022741d8b8608aa5451af6a05907fc023625940c00f1") format("woff2"),
+       url("//section.store/cdn/fonts/josefin_sans/josefinsans_n4.ed7230a86e75b34b997bd12a5e1b87fcaf7104d8.woff?h1=c2VjdGlvbi5zdG9yZQ&h2=c2VjdGlvbi1zdG9yZS1hcHAuYWNjb3VudC5teXNob3BpZnkuY29t&hmac=3f19a3e11bab2423756ce410220df09957f15affd53a78fa0ec435e5660aa636") format("woff");
+}
+
+  @font-face {
+  font-family: "Josefin Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("//section.store/cdn/fonts/josefin_sans/josefinsans_n4.c8300d95fd4ce72542a6efba9c682da40d144fba.woff2?h1=c2VjdGlvbi5zdG9yZQ&h2=c2VjdGlvbi1zdG9yZS1hcHAuYWNjb3VudC5teXNob3BpZnkuY29t&hmac=1081bc13bac779d73b77022741d8b8608aa5451af6a05907fc023625940c00f1") format("woff2"),
+       url("//section.store/cdn/fonts/josefin_sans/josefinsans_n4.ed7230a86e75b34b997bd12a5e1b87fcaf7104d8.woff?h1=c2VjdGlvbi5zdG9yZQ&h2=c2VjdGlvbi1zdG9yZS1hcHAuYWNjb3VudC5teXNob3BpZnkuY29t&hmac=3f19a3e11bab2423756ce410220df09957f15affd53a78fa0ec435e5660aa636") format("woff");
+}
+
+  @font-face {
+  font-family: "Josefin Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("//section.store/cdn/fonts/josefin_sans/josefinsans_n4.c8300d95fd4ce72542a6efba9c682da40d144fba.woff2?h1=c2VjdGlvbi5zdG9yZQ&h2=c2VjdGlvbi1zdG9yZS1hcHAuYWNjb3VudC5teXNob3BpZnkuY29t&hmac=1081bc13bac779d73b77022741d8b8608aa5451af6a05907fc023625940c00f1") format("woff2"),
+       url("//section.store/cdn/fonts/josefin_sans/josefinsans_n4.ed7230a86e75b34b997bd12a5e1b87fcaf7104d8.woff?h1=c2VjdGlvbi5zdG9yZQ&h2=c2VjdGlvbi1zdG9yZS1hcHAuYWNjb3VudC5teXNob3BpZnkuY29t&hmac=3f19a3e11bab2423756ce410220df09957f15affd53a78fa0ec435e5660aa636") format("woff");
+}
+
+  
+  .section-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+    border-top: solid #000000 0px;
+    border-bottom: solid #000000 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background: {{ section.settings.sec_bg_color }};
+  }
+  
+  .section-{{ section.id }}ss_featured_collection_5_{{ section.id }}-settings {
+    margin: 0 auto;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .featured-body-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    position: relative;
+  }
+
+  .featured-collection-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0px;
+    border: 0px solid #000000;
+    display: flex;
+    align-items: center;
+  }
+
+  .featured-collection-image-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .featured-collection-image-{{ section.id }}ss_featured_collection_5_{{ section.id }} img,
+  .featured-collection-image-{{ section.id }}ss_featured_collection_5_{{ section.id }} svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .featured-collection-image-{{ section.id }}ss_featured_collection_5_{{ section.id }}::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .featured-collection-button-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 200px;
+    margin: 0;
+    font-size: 12px;
+    color: #656565;
+    line-height: 100%;
+    text-align: center;
+    text-transform: unset;
+    text-decoration: none;
+    padding: 16px 24px;
+    border-radius: 4px;
+    transition: all 0.25s ease 0s;
+    position: relative;
+    font-weight: 700;
+    z-index: 2;
+  }
+
+  .featured-collection-button-{{ section.id }}ss_featured_collection_5_{{ section.id }}:hover {
+    color: #656565;
+    transition: all 0.25s ease 0s;
+  }
+
+  .featured-collection-button-{{ section.id }}ss_featured_collection_5_{{ section.id }} svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .featured-collection-button-{{ section.id }}ss_featured_collection_5_{{ section.id }} svg path {
+    fill: #656565;
+    transition: all 0.25s ease 0s;
+  }
+
+  .featured-collection-button-{{ section.id }}ss_featured_collection_5_{{ section.id }}:hover svg path {
+    fill: #656565;
+    transition: all 0.25s ease 0s;
+  }
+
+  .featured-products-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    align-items: start;
+  }
+
+  .featured-product-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+    box-sizing: border-box !important;
+  }
+
+  .featured-product-image-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+    overflow: hidden;
+    border-radius: 0px;
+    border: 0px solid #000000;
+    position: relative;
+  }
+
+  .featured-product-image-{{ section.id }}ss_featured_collection_5_{{ section.id }} img,
+  .featured-product-image-{{ section.id }}ss_featured_collection_5_{{ section.id }} svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .featured-product-image-{{ section.id }}ss_featured_collection_5_{{ section.id }} svg {
+    background-color: #AFAFAF;
+  }
+
+  .featured-product-image-{{ section.id }}ss_featured_collection_5_{{ section.id }} form {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    transition: all 0.4s ease 0s;
+    z-index: 0;
+  }
+
+  .featured-product-image-with-link-{{ section.id }}ss_featured_collection_5_{{ section.id }} .featured-product-button-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+    width: auto;
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    transition: all 0.4s ease 0s;
+  }
+
+  .featured-product-button-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 12px;
+    color: #656565;
+    line-height: 100%;
+    text-align: center;
+    text-transform: unset;
+    text-decoration: none;
+    padding: 16px 24px;
+    border-radius: 0px;
+    transition: all 0.25s ease 0s;
+    position: relative;
+    font-weight: 700;
+    z-index: 2;
+    background-color: #ffffff;
+    border: 0px solid #000000;
+    cursor: pointer;
+  }
+
+  .featured-product-button-{{ section.id }}ss_featured_collection_5_{{ section.id }}:hover {
+    color: #656565;
+    background-color: #ffffff;
+    border: 0px solid #000000;
+    transition: all 0.25s ease 0s;
+  }
+
+  .featured-product-heading-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    font-size: 13px;
+    color: #000000;
+    line-height: 130%;
+    text-transform: unset;
+    font-style: normal;
+    z-index: 1;
+    position: relative;
+  }
+
+  .featured-product-price-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    z-index: 1;
+    position: relative;
+  }
+
+  .featured-product-price-{{ section.id }}ss_featured_collection_5_{{ section.id }} * {
+    margin: 0;
+    font-size: 13px;
+    color: #2a1f19;
+    line-height: 130%;
+    text-transform: unset;
+    font-style: normal;
+  }
+
+  .featured-product-compare-price-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+    opacity: 0.8;
+    font-size: 10.4px;
+    color: #2a1f19;
+    text-decoration: line-through !important;
+  }
+
+  .featured-slider-wrapper-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+    min-width: 0;
+  }
+
+
+  .featured-scrollbar-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+    position: static !important;
+    margin-top: 20px;
+    background-color: #efefef;
+  }
+
+  .featured-scrollbar-{{ section.id }}ss_featured_collection_5_{{ section.id }} .swiper-scrollbar-drag {
+    display: block !important;
+    background-color: #000000;
+  }
+
+  .has-secondary-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+    position: relative;
+  }
+
+  .featured-second-image-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    display: none !important;
+  }
+
+  @keyframes fade-in-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @media(min-width: 1024px) {
+
+    .shopify-section-padding-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    .section-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+    
+    .section-{{ section.id }}ss_featured_collection_5_{{ section.id }}-settings {
+      padding: 0 5rem;
+      padding-top: 36px;
+      padding-bottom: 36px;
+      padding-left: 0rem;
+      padding-right: 0rem;
+    }
+
+    .featured-body-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .featured-collection-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+      position: sticky;
+      top: 0;
+    }
+
+    .featured-collection-button-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+      max-width: 200px;
+      padding: 16px 24px;
+      font-size: 12px;
+    }
+
+    .featured-products-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+      display: grid;
+    }
+
+    .featured-product-{{ section.id }}ss_featured_collection_5_{{ section.id }} form {
+      transform: translateY(30%);
+      opacity: 0;
+      transition: all 0.4s ease 0s;
+    }
+
+    .featured-product-{{ section.id }}ss_featured_collection_5_{{ section.id }}:hover form {
+      transform: translateY(0%);
+      opacity: 1;
+      transition: all 0.4s ease 0s;
+    }
+
+    .featured-product-image-with-link-{{ section.id }}ss_featured_collection_5_{{ section.id }} .featured-product-button-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+      transform: translateY(30%);
+      opacity: 0;
+      transition: all 0.4s ease 0s;
+    }
+
+    .featured-product-{{ section.id }}ss_featured_collection_5_{{ section.id }}:hover .featured-product-image-with-link-{{ section.id }}ss_featured_collection_5_{{ section.id }} .featured-product-button-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+      transform: translateY(0%);
+      opacity: 1;
+      transition: all 0.4s ease 0s;
+    }
+
+    .featured-product-button-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+      padding: 16px 24px;
+      font-size: 12px;
+    }
+
+    .featured-product-heading-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .featured-product-price-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+      margin-top: 6px;
+    }
+
+    .featured-product-price-{{ section.id }}ss_featured_collection_5_{{ section.id }} * {
+      font-size: 13px;
+    }
+
+    .featured-slider-wrapper-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+      display: none;
+    }
+
+    .has-secondary-{{ section.id }}ss_featured_collection_5_{{ section.id }}:hover .featured-first-image-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+      display: none;
+    }
+  
+    .has-secondary-{{ section.id }}ss_featured_collection_5_{{ section.id }}:hover .featured-second-image-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+      display: block !important;
+      position: static !important;
+      -webkit-animation: fade-in-{{ section.id }}ss_featured_collection_5_{{ section.id }} 0.5s linear;
+      animation: fade-in-{{ section.id }}ss_featured_collection_5_{{ section.id }} 0.5s linear;
+    }
+  }</style>
+
+  <style>
+   .featured-collection-button-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+      margin-left: auto;
+      margin-right: auto;
+    } 
+  </style>
+
+<style>
+    @media(min-width: 1024px) {
+     .featured-collection-button-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+        margin-left: auto !important;
+        margin-right: auto !important;
+      } 
+    }
+  </style>
+
+  <style>
+    .featured-collection-button-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+      background-color: #ffffff;
+    }
+
+    .featured-collection-button-{{ section.id }}ss_featured_collection_5_{{ section.id }}:hover {
+      background-color: #ffffff;
+    }
+  </style>
+
+  <style>
+    .featured-product-price-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+      justify-content: center;
+    } 
+  </style>
+
+  <style>
+    @media(min-width: 1024px) {
+       .featured-product-price-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+        justify-content: center;
+      } 
+    }
+  </style>
+
+  <style>
+    .featured-collection-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+      order: 1;
+    }
+    
+    .featured-slider-wrapper-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+      order: 2;
+    }
+  </style>
+
+  <style>
+    @media(min-width: 1024px) {
+     .featured-collection-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+        order: 1;
+      }
+      
+      .featured-products-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+        order: 2;
+      } 
+    }
+  </style>
+
+  <style>
+    .featured-product-image-{{ section.id }}ss_featured_collection_5_{{ section.id }} img,
+    .featured-product-image-{{ section.id }}ss_featured_collection_5_{{ section.id }} svg {
+     aspect-ratio: 12/12; 
+    }
+  </style>
+
+  <style>
+    @media(min-width: 1024px) {
+      .featured-product-image-{{ section.id }}ss_featured_collection_5_{{ section.id }} img,
+      .featured-product-image-{{ section.id }}ss_featured_collection_5_{{ section.id }} svg {
+       aspect-ratio: 12/12; 
+      }
+    }
+  </style>
+
+  <style>
+    .featured-collection-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+     aspect-ratio: 12/12; 
+    }
+  </style>
+
+  <style>
+    @media(min-width: 1024px) {
+      .featured-collection-{{ section.id }}ss_featured_collection_5_{{ section.id }} {
+       aspect-ratio: 12/12; 
+      }
+    }
+  </style>
+
+{% assign collection = section.settings.collection %}
+{% assign product_limit = section.settings.product_limit %}
+
+<div class="section-{{ section.id }}ss_featured_collection_5_{{ section.id }} featured-{{ section.id }}ss_featured_collection_5_{{ section.id }}" bis_skin_checked="1">
+    <div class="section-{{ section.id }}ss_featured_collection_5_{{ section.id }}-settings" bis_skin_checked="1">
+      <div class="featured-body-{{ section.id }}ss_featured_collection_5_{{ section.id }}" bis_skin_checked="1">
+
+        
+        <div class="featured-collection-{{ section.id }}ss_featured_collection_5_{{ section.id }}" bis_skin_checked="1">
+          <div class="featured-collection-image-{{ section.id }}ss_featured_collection_5_{{ section.id }}" bis_skin_checked="1">
+
+              {% if section.settings.collection_banner != blank %}
+              <img src="{{ section.settings.collection_banner | img_url: 'master' }}" alt="" loading="lazy">
+              {% endif %}
+          </div>
+          
+            <a href="{{ section.settings.collection_url }}" class="featured-collection-button-{{ section.id }}ss_featured_collection_5_{{ section.id }}"> 
+              {{ section.settings.collection_label }}
+            </a>
+          
+        </div>
+
+        <div class="featured-products-{{ section.id }}ss_featured_collection_5_{{ section.id }}" bis_skin_checked="1">
+         
+              <div class="featured-product-{{ section.id }}ss_featured_collection_5_{{ section.id }}" bis_skin_checked="1">
+            {% if collection.products.size > 0 %}
+    {% for product in collection.products limit: product_limit %}     
+                  <a href="{{ product.url }}" class=" featured-product-image-{{ section.id }}ss_featured_collection_5_{{ section.id }}  has-secondary-{{ section.id }}ss_featured_collection_5_{{ section.id }} ">
+                    <img class="featured-first-image-{{ section.id }}ss_featured_collection_5_{{ section.id }}" src="{{ product.featured_image | img_url: 'master' }}" alt="Whitney Pullover" loading="lazy">
+
+                    <img class="featured-second-image-{{ section.id }}ss_featured_collection_5_{{ section.id }}" src="{% if product.images[1] != blank %}{{ product.images[1] | img_url: 'master' }} {% else %} {{ product.featured_image | img_url: 'master' }} {% endif %}" alt="" loading="lazy">
+                    
+                     <form method="post" action="/cart/add" accept-charset="UTF-8" class="form" enctype="multipart/form-data" novalidate="novalidate" data-type="add-to-cart-form"><input type="hidden" name="form_type" value="product"><input type="hidden" name="utf8" value="✓">
+                       <button type="submit" class="featured-product-button-{{ section.id }}ss_featured_collection_5_{{ section.id }}">
+                        <input type="hidden" name="id" value="43313930305785" disabled="" class="product-variant-id">
+                        <input type="hidden" value="43313930305785" name="items[0][id]" class="product-other-variant-id">
+                        <input class="quantity" type="hidden" name="items[0][quantity]" value="1">
+                        ADD TO CART
+                      </button>
+                      <input type="hidden" name="product-id" value="7772725870841"><input type="hidden" name="section-id" value="{{ section.id }}ss_featured_collection_5_{{ section.id }}">
+                     </form>
+                  </a>
+                
+                <p class="featured-product-heading-{{ section.id }}ss_featured_collection_5_{{ section.id }}">{{ product.title }}</p>
+                <div class="featured-product-price-{{ section.id }}ss_featured_collection_5_{{ section.id }}" bis_skin_checked="1">
+                  <p class="featured-product-regular-price-{{ section.id }}ss_featured_collection_5_{{ section.id }}">{{ product.price | money }}</p>
+                </div>
+  {% endfor %}
+  {% endif %} 
+              
+              </div>
+            
+              
+        </div>
+
+
+          
+      </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  function initScrollingProducts() {
+    const slider = new Swiper(".featured-slider-{{ section.id }}ss_featured_collection_5_{{ section.id }}", {
+      speed: 400,
+      spaceBetween: 20,
+      loop: true,
+      scrollbar: {
+        el: '.featured-scrollbar-{{ section.id }}ss_featured_collection_5_{{ section.id }}',
+        draggable: true,
+      },
+      breakpoints: {
+        320: {
+          spaceBetween: 8,
+          slidesPerView: 1.2
+        },
+        768: {
+          spaceBetween: 8,
+          slidesPerView: 2.4
+        }
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initScrollingProducts);
+  
+  if (Shopify.designMode) {
+     document.addEventListener('shopify:section:unload', initScrollingProducts);
+     document.addEventListener('shopify:section:load', initScrollingProducts);
+  }
+</script>
+
+</div>
+
+{% schema %}
+{
+  "name": "Featured Collection 5",
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "unit": "px",
+      "step": 1,
+      "min": 14,
+      "max": 50,
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "unit": "px",
+      "step": 1,
+      "min": 14,
+      "max": 50,
+      "default": 36
+    },
+    {
+      "type": "color",
+      "id": "sec_bg_color",
+      "label": "Section BG Color",
+      "default": "transparent"
+    },
+    {
+  "type": "header",
+  "content": "Collection",
+  "info": "Collection Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "collection_banner",
+      "label": "Collection Banner"
+    },
+    {
+      "type": "url",
+      "id": "collection_url",
+      "label": "Collection link",
+      "default": "/"
+    },
+    {
+      "type": "text",
+      "id": "collection_label",
+      "label": "Collection Label",
+      "default": "SHOP APPAREL"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Select a Collection"
+    },
+    {
+      "type": "range",
+      "id": "product_limit",
+      "label": "Number of Products to Display",
+      "min": 3,
+      "max": 20,
+      "default": 10
+    },
+    {
+      "type": "text",
+      "id": "button_name",
+      "label": "Button Text",
+      "default": "Load More"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button URL"
+    },
+    {
+  "type": "header",
+  "content": "Hero Title",
+  "info": "Title Settings"
+    },
+    {
+      "type": "text",
+      "id": "context_text",
+      "label": "Title",
+      "default": "GET ONE."
+    },
+    {
+      "type": "range",
+      "id": "title-size",
+      "label": "Font size Desktop",
+      "unit": "px",
+      "step": 2,
+      "min": 14,
+      "max": 100,
+      "default": 98
+    },
+    {
+      "type": "range",
+      "id": "title-size-m",
+      "label": "Font size Mobile",
+      "unit": "px",
+      "step": 2,
+      "min": 14,
+      "max": 100,
+      "default": 18
+    },
+    {
+      "type": "color",
+      "id": "title-color",
+      "label": "Title Color Desktop",
+      "default": "#41441c"
+   },
+    {
+      "type": "color",
+      "id": "title-color-m",
+      "label": "Title Color Mobile",
+      "default": "#41441c"
+   },
+    {
+    "type": "header",
+    "content": "Hero Subheading",
+    "info": "Subheading Settings"
+   },
+    {
+      "type": "text",
+      "id": "subheading_",
+      "label": "Subheading",
+      "default": "A cozy twist on home essentials, designed to add warmth and style to your space with our luxurious throw rugs."
+    },
+    {
+     "type": "color",
+    "id": "subheading_color",
+    "label": "Color",
+    "default": "#41441c"
+    },
+{
+  "type": "range",
+  "id": "subheading_font",
+  "label": "Font size Desktop",
+  "unit": "px",
+  "step": 2,
+  "min": 14,
+  "max": 50,
+  "default": 24
+},
+{
+  "type": "range",
+  "id": "subheading_font-m",
+  "label": "Font size Mobile",
+  "unit": "px",
+  "step": 1,
+  "min": 14,
+  "max": 30,
+  "default": 18
+},
+    {
+    "type": "header",
+    "content": "Hero Button",
+    "info": "Button Settings"
+   },
+    {
+      "type": "url",
+      "id": "btn_url",
+      "label": "Button URL",
+      "default": "/"
+    },
+    {
+      "type": "text",
+      "id": "btn_label",
+      "label": "Button Label",
+      "default": "SHOP ALL"
+    },
+     {
+     "type": "color",
+    "id": "btn_color",
+    "label": "Color",
+    "default": "#41441c"
+    },
+    {
+     "type": "color",
+    "id": "btn_border-color",
+    "label": "Border Color",
+    "default": "#41441c"
+    },
+    {
+     "type": "color",
+    "id": "btn_bgcolor",
+    "label": "Background Color",
+    "default": "transparent"
+    },
+    {
+      "type": "range",
+      "id": "btn_font",
+      "label": "Font size Desktop",
+      "unit": "px",
+      "step": 2,
+      "min": 14,
+      "max": 50,
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "btn_font-m",
+      "label": "Font size Mobile",
+      "unit": "px",
+      "step": 1,
+      "min": 14,
+      "max": 30,
+      "default": 20
+    },
+    {
+    "type": "header",
+    "content": "Product Info",
+    "info": "Info Settings"
+   },
+    {
+     "type": "color",
+    "id": "pro_title_color",
+    "label": "Title Color",
+    "default": "#41441c"
+    },
+    {
+      "type": "range",
+      "id": "pro_font",
+      "label": "Font size Desktop",
+      "unit": "px",
+      "step": 1,
+      "min": 14,
+      "max": 30,
+      "default": 22
+    },
+    {
+      "type": "range",
+      "id": "pro_font-m",
+      "label": "Font size Mobile",
+      "unit": "px",
+      "step": 1,
+      "min": 14,
+      "max": 30,
+      "default": 22
+    },
+    {
+    "type": "header",
+    "content": "Slider Button SVG",
+    "info": "SVG Settings"
+   },
+    {
+     "type": "color",
+    "id": "svg_color",
+    "label": "SVG BG Color",
+    "default": "#41441c"
+    },
+    {
+     "type": "color",
+    "id": "svg_color_hover",
+    "label": "SVG BG Hover Color",
+    "default": "#41441c"
+    },
+    {
+     "type": "color",
+    "id": "svg_border",
+    "label": "SVG Border Color",
+    "default": "#41441c"
+    },
+    {
+     "type": "color",
+    "id": "svg_border_hover",
+    "label": "SVG Border Hover Color",
+    "default": "#41441c"
+    },
+  ],
+  "presets": [
+    {
+      "name": "Featured Collection 5"
+    }
+  ]
+}
+{% endschema %}
